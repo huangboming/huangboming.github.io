@@ -5,17 +5,22 @@
   
 
   
-  <title>漫游人生</title>
+  <title>暴力破解约瑟夫环问题（不用任何数学公式） | 漫游人生</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="数学系大学生一枚，目前还在漫无目的地闲逛，碰到什么好玩的东西都会分享出来，主要方向是编程">
-<meta property="og:type" content="website">
-<meta property="og:title" content="漫游人生">
-<meta property="og:url" content="http://huangboming.github.io/index.html">
+  <meta name="description" content="暴力破解约瑟夫环问题（不用任何数学公式）前几天和好朋友聊天时听她提到约瑟夫环问题，感觉挺有意思的，就试着写了一下。 写完之后，我带着好奇心去Google别人的解法，看看还有没有其他的方法去解决这个问题。很多人通过求余和递推的方法推导出一个数学公式，然后根据数学公式解决问题；还有一部分人用链表的方法解决。然而，看了一个早上，这两种办法我都没看懂——我既没学过C语言的链表，对求余的性质也不熟悉，他们的">
+<meta property="og:type" content="article">
+<meta property="og:title" content="暴力破解约瑟夫环问题（不用任何数学公式）">
+<meta property="og:url" content="http://huangboming.github.io/2020/03/16/%E6%9A%B4%E5%8A%9B%E7%A0%B4%E8%A7%A3%E7%BA%A6%E7%91%9F%E5%A4%AB%E7%8E%AF%E9%97%AE%E9%A2%98%EF%BC%88%E4%B8%8D%E7%94%A8%E4%BB%BB%E4%BD%95%E6%95%B0%E5%AD%A6%E5%85%AC%E5%BC%8F%EF%BC%89/index.html">
 <meta property="og:site_name" content="漫游人生">
-<meta property="og:description" content="数学系大学生一枚，目前还在漫无目的地闲逛，碰到什么好玩的东西都会分享出来，主要方向是编程">
+<meta property="og:description" content="暴力破解约瑟夫环问题（不用任何数学公式）前几天和好朋友聊天时听她提到约瑟夫环问题，感觉挺有意思的，就试着写了一下。 写完之后，我带着好奇心去Google别人的解法，看看还有没有其他的方法去解决这个问题。很多人通过求余和递推的方法推导出一个数学公式，然后根据数学公式解决问题；还有一部分人用链表的方法解决。然而，看了一个早上，这两种办法我都没看懂——我既没学过C语言的链表，对求余的性质也不熟悉，他们的">
 <meta property="og:locale" content="zh">
+<meta property="og:image" content="https://tva1.sinaimg.cn/large/00831rSTgy1gcw2z9vcnoj312805274v.jpg">
+<meta property="article:published_time" content="2020-03-16T11:40:11.000Z">
+<meta property="article:modified_time" content="2020-03-16T14:17:45.234Z">
 <meta property="article:author" content="黄柏铭">
+<meta property="article:tag" content="编程问题">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://tva1.sinaimg.cn/large/00831rSTgy1gcw2z9vcnoj312805274v.jpg">
   
     <link rel="alternate" href="/atom.xml" title="漫游人生" type="application/atom+xml">
   
@@ -64,9 +69,7 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-    <article id="post-暴力破解约瑟夫环问题（不用任何数学公式）" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-暴力破解约瑟夫环问题（不用任何数学公式）" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2020/03/16/%E6%9A%B4%E5%8A%9B%E7%A0%B4%E8%A7%A3%E7%BA%A6%E7%91%9F%E5%A4%AB%E7%8E%AF%E9%97%AE%E9%A2%98%EF%BC%88%E4%B8%8D%E7%94%A8%E4%BB%BB%E4%BD%95%E6%95%B0%E5%AD%A6%E5%85%AC%E5%BC%8F%EF%BC%89/" class="article-date">
   <time datetime="2020-03-16T11:40:11.000Z" itemprop="datePublished">2020-03-16</time>
@@ -79,8 +82,8 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/03/16/%E6%9A%B4%E5%8A%9B%E7%A0%B4%E8%A7%A3%E7%BA%A6%E7%91%9F%E5%A4%AB%E7%8E%AF%E9%97%AE%E9%A2%98%EF%BC%88%E4%B8%8D%E7%94%A8%E4%BB%BB%E4%BD%95%E6%95%B0%E5%AD%A6%E5%85%AC%E5%BC%8F%EF%BC%89/">暴力破解约瑟夫环问题（不用任何数学公式）</a>
+    <h1 class="article-title" itemprop="name">
+      暴力破解约瑟夫环问题（不用任何数学公式）
     </h1>
   
 
@@ -173,62 +176,19 @@
     </footer>
   </div>
   
-</article>
-
-
+    
+<nav id="article-nav">
   
-    <article id="false-编程--与计算机交流的工具 " class="article article-type-false" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/03/16/%E7%BC%96%E7%A8%8B--%E4%B8%8E%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%BA%A4%E6%B5%81%E7%9A%84%E5%B7%A5%E5%85%B7%20/" class="article-date">
-  <time datetime="2020-03-16T05:27:56.000Z" itemprop="datePublished">2020-03-16</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/03/16/%E7%BC%96%E7%A8%8B--%E4%B8%8E%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%BA%A4%E6%B5%81%E7%9A%84%E5%B7%A5%E5%85%B7%20/">编程--与计算机交流的工具</a>
-    </h1>
+    <a href="/2020/03/16/%E7%BC%96%E7%A8%8B--%E4%B8%8E%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%BA%A4%E6%B5%81%E7%9A%84%E5%B7%A5%E5%85%B7%20/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">编程--与计算机交流的工具</div>
+    </a>
   
+</nav>
 
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>提到编程，很多人的第一反应是编程很难，紧接着第二反应就是“这东西和我没有什么关系”。于是，虽然人人都说编程有用，是一项必不可少的技能，自己心里也明白编程的重要性，但是就是不想学，不肯学，也不敢学。<br /><br>之前我在宿舍学习编程的时候，我舍友凑过来，好奇地盯着我的屏幕。我转过头，问他：“要不要一起来搞编程，挺有意思的。”他听了我这句话之后好像触电了似的摇了摇头，“不了不了，我高中的时候看过一点点，我觉得我学不明白。”我也不再劝他，因为我知道我的话语并不能改变他的想法，于是我只能转过头继续学我的编程。<br /><br>但，从本质看，编程其实就是<strong>用“计算机能够理解”的语言去表达概念和思想。</strong> 换句话说，编程只是一种与计算机交流的工具，并没有人们想象中的那么高深莫测，也没有什么想象中的那么难学、那么枯燥。<br /><br>对中国人说汉语，对美国人说英语，那么对计算机就要说它能够理解的语言。学习编程其实就是学习一门语言，或者更通俗一些，</p>
-<blockquote>
-<p>学习编程就是在学习如何用某种语言去表达出某个意思。</p>
-</blockquote>
-<p>这就好像我们摆一个苹果在中国小孩面前，问他/她这是什么，他/她会回答：“（这是）苹果。”而同样地，我们摆一个苹果在美国小孩面前，问他/她这是什么时，他/她则会回答：“An apple.”虽然这两个词看上去完全不一样，但是要表达的意思却是完全一样的。而我们学习编程就是想办法用一种“计算机能够理解”的语言去表达“苹果”这个意思。<br /><br>不一样的是，学习编程语言并不需要去背单词，也不需要去记语法。这对于习惯于长年<strong>学</strong>英语的人来说简直是一种莫大的解脱。我们学习编程语言更多地是学习句法/语法，即</p>
-<blockquote>
-<p>用某个特定的句式去表达一类意思。</p>
-</blockquote>
-<p>从这个角度上看，语法也不是什么特别难的东西，只不过很多人不知不觉中将这个词魔化了而已。<br /><br>比如说，在英语中我想表达“如果……那么……，否则……”这个意思，我就会用“if”这个句式——只要我想表达这个意思，我便使用这个句式，这样就没必要去记什么“条件状语从句”这样的专业概念。比如说，我想跟留学生说：如果我今晚有时间的话，那么我就和你去看电影。我会直接说出“If I’m spare tonight, I’ll watch the film with you”，而不是先想想我要用“条件状语从句”去表达这个意思。<br /><br>同样地，想要在编程语言中表达出同样的意思，我只要用”if…elif…else”这个句式就可以了。<br /><br>从这个角度看，学习编程语言只要：</p>
-<ul>
-<li>知道什么句式表达哪一类/什么意思，反过来要表达某个意思，应该用哪个句式</li>
-<li>知道什么符号表达什么意思<br /><br>从这两个角度切入，编程语言并不像人们想象中的那么高深晦涩，学习编程其实就只是多学一门语言。如果你对编程感兴趣，又因为觉得编程难而不敢下手，我希望你可以放下这个包袱，开始上路，感受来自编程世界的美。</li>
-</ul>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://huangboming.github.io/2020/03/16/%E7%BC%96%E7%A8%8B--%E4%B8%8E%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%BA%A4%E6%B5%81%E7%9A%84%E5%B7%A5%E5%85%B7%20/" data-id="ck7u1jhbu0000bd7w3ex3h5y5" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E7%BC%96%E7%A8%8B/" rel="tag">编程</a></li></ul>
-
-    </footer>
-  </div>
   
 </article>
-
-
-  
-
 
 </section>
         
