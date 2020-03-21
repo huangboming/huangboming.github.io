@@ -79,12 +79,12 @@
 
 
 
-<meta name="description" content="暴力破解约瑟夫环问题（不用任何数学公式）前几天和好朋友聊天时听她提到约瑟夫环问题，感觉挺有意思的，就试着写了一下。 写完之后，我带着好奇心去Google别人的解法，看看还有没有其他的方法去解决这个问题。很多人通过求余和递推的方法推导出一个数学公式，然后根据数学公式解决问题；还有一部分人用链表的方法解决。然而，看了一个早上，这两种办法我都没看懂——我既没学过C语言的链表，对求余的性质也不熟悉，他们的">
+<meta name="description" content="¶暴力破解约瑟夫环问题（不用任何数学公式） 前几天和好朋友聊天时听她提到约瑟夫环问题，感觉挺有意思的，就试着写了一下。 写完之后，我带着好奇心去Google别人的解法，看看还有没有其他的方法去解决这个问题。很多人通过求余和递推的方法推导出一个数学公式，然后根据数学公式解决问题；还有一部分人用链表的方法解决。然而，看了一个早上，这两种办法我都没看懂——我既没学过C语言的链表，对求余的性质也不熟悉，他">
 <meta property="og:type" content="article">
 <meta property="og:title" content="暴力破解约瑟夫环问题（不用任何数学公式）">
 <meta property="og:url" content="http://huangboming.github.io/2020/03/16/%E6%9A%B4%E5%8A%9B%E7%A0%B4%E8%A7%A3%E7%BA%A6%E7%91%9F%E5%A4%AB%E7%8E%AF%E9%97%AE%E9%A2%98%EF%BC%88%E4%B8%8D%E7%94%A8%E4%BB%BB%E4%BD%95%E6%95%B0%E5%AD%A6%E5%85%AC%E5%BC%8F%EF%BC%89/index.html">
 <meta property="og:site_name" content="漫游人生">
-<meta property="og:description" content="暴力破解约瑟夫环问题（不用任何数学公式）前几天和好朋友聊天时听她提到约瑟夫环问题，感觉挺有意思的，就试着写了一下。 写完之后，我带着好奇心去Google别人的解法，看看还有没有其他的方法去解决这个问题。很多人通过求余和递推的方法推导出一个数学公式，然后根据数学公式解决问题；还有一部分人用链表的方法解决。然而，看了一个早上，这两种办法我都没看懂——我既没学过C语言的链表，对求余的性质也不熟悉，他们的">
+<meta property="og:description" content="¶暴力破解约瑟夫环问题（不用任何数学公式） 前几天和好朋友聊天时听她提到约瑟夫环问题，感觉挺有意思的，就试着写了一下。 写完之后，我带着好奇心去Google别人的解法，看看还有没有其他的方法去解决这个问题。很多人通过求余和递推的方法推导出一个数学公式，然后根据数学公式解决问题；还有一部分人用链表的方法解决。然而，看了一个早上，这两种办法我都没看懂——我既没学过C语言的链表，对求余的性质也不熟悉，他">
 <meta property="og:image" content="https://tva1.sinaimg.cn/large/00831rSTgy1gcw2z9vcnoj312805274v.jpg">
 <meta property="article:published_time" content="2020-03-16T11:40:11.000Z">
 <meta property="article:modified_time" content="2020-03-17T15:38:18.895Z">
@@ -301,12 +301,13 @@
       
 
       
-        <h2 id="暴力破解约瑟夫环问题（不用任何数学公式）"><a href="#暴力破解约瑟夫环问题（不用任何数学公式）" class="headerlink" title="暴力破解约瑟夫环问题（不用任何数学公式）"></a>暴力破解约瑟夫环问题（不用任何数学公式）</h2><p>前几天和好朋友聊天时听她提到约瑟夫环问题，感觉挺有意思的，就试着写了一下。<br></p>
+        <h2 id="暴力破解约瑟夫环问题（不用任何数学公式）"><a class="header-anchor" href="#暴力破解约瑟夫环问题（不用任何数学公式）">¶</a>暴力破解约瑟夫环问题（不用任何数学公式）</h2>
+<p>前几天和好朋友聊天时听她提到约瑟夫环问题，感觉挺有意思的，就试着写了一下。<br></p>
 <p>写完之后，我带着好奇心去Google别人的解法，看看还有没有其他的方法去解决这个问题。很多人通过求余和递推的方法推导出一个数学公式，然后根据数学公式解决问题；还有一部分人用链表的方法解决。然而，看了一个早上，这两种办法我都没看懂——我既没学过C语言的链表，对求余的性质也不熟悉，他们的思路稍微绕一下我就被绕晕了。<br></p>
 <p>最终对比下来，我发现我的思路比较暴力，而且也没有发现和别人的思路重合（当然肯定有些人和我的想法一样，只是我没有看到罢了），于是就干脆写成一篇文章，希望能帮到那些和我一样被绕晕的人。</p>
 <a id="more"></a>
-
-<h3 id="先谈谈约瑟夫环问题"><a href="#先谈谈约瑟夫环问题" class="headerlink" title="先谈谈约瑟夫环问题"></a>先谈谈约瑟夫环问题</h3><p>约瑟夫环问题（Josephus problem）指的是：<br></p>
+<h3 id="先谈谈约瑟夫环问题"><a class="header-anchor" href="#先谈谈约瑟夫环问题">¶</a>先谈谈约瑟夫环问题</h3>
+<p>约瑟夫环问题（Josephus problem）指的是：<br></p>
 <blockquote>
 <p align="left">n个人围成一个圆，从第一个人开始，沿顺时针方向依次报数，报到m的人（称为A）出列；A的下家接着从1开始报数，报到m的人（称为B）出列；B的下家接着从1开始报数......如此循环，直到只剩下最后一个人。</p>
 </blockquote>
@@ -315,14 +316,20 @@
 <p align="left">输入n,m<br></p>
 <p align="left">输出这n个人出列的顺序</p>
 </blockquote>
-<h3 id="大致思路"><a href="#大致思路" class="headerlink" title="大致思路"></a>大致思路</h3><p>第一步：将n个人从1到n编号，储存在一个数组（C/Javascript）/列表（Python）中<br><br>第二步：数到m的那个人出列，总人数n-1<br><br>第三步：将下一个人定义为数组的第一个数<br><br>第四步：重复第二第三步，直到n=1（用递归的方式实现）<br></p>
-<h3 id="难点"><a href="#难点" class="headerlink" title="难点"></a>难点</h3><p>约瑟夫环问题包含两个动作（也就是两个难点）：<br></p>
+<h3 id="大致思路"><a class="header-anchor" href="#大致思路">¶</a>大致思路</h3>
+<p>第一步：将n个人从1到n编号，储存在一个数组（C/Javascript）/列表（Python）中<br><br>
+第二步：数到m的那个人出列，总人数n-1<br><br>
+第三步：将下一个人定义为数组的第一个数<br><br>
+第四步：重复第二第三步，直到n=1（用递归的方式实现）<br></p>
+<h3 id="难点"><a class="header-anchor" href="#难点">¶</a>难点</h3>
+<p>约瑟夫环问题包含两个动作（也就是两个难点）：<br></p>
 <ol>
 <li>报到m的人出列（如何表示出列人所对应的数字——特别是m&gt;n时，即报有人要多次报数）</li>
 <li>从下一个人开始报数（怎么样把下一个人定义为第一个）</li>
 </ol>
 <p>这里的难点其实不难，但是对于理解思路相当关键。<br></p>
-<p>第一个难点：<br><br>先提一个题外话：大家应该都做过类似的数学题：</p>
+<p>第一个难点：<br><br>
+先提一个题外话：大家应该都做过类似的数学题：</p>
 <blockquote>
 <p align="left">1、2、3、1、2、3、1......这样数下去，第2020个数字是___。</p>
 </blockquote>
@@ -331,7 +338,7 @@
 <blockquote>
 <p align="left">n除以3的余数如果为1，那么答案就是1；如果为2，那么答案就是2；如果为0（即n整除3），那么答案就是3。<p>
 </blockquote>
-<p><strong>现在我们有一个3人围成的圆，从第一个人开始沿顺时针依次报数，报到2020的那个家伙出列，问是哪一个人出列了。</strong>这个问题本质上和上面那个问题一模一样——将报数看成第几个数字，将人坐在的位置看成1、2、3：<br></p>
+<p>**现在我们有一个3人围成的圆，从第一个人开始沿顺时针依次报数，报到2020的那个家伙出列，问是哪一个人出列了。**这个问题本质上和上面那个问题一模一样——将报数看成第几个数字，将人坐在的位置看成1、2、3：<br></p>
 <p><img src="https://tva1.sinaimg.cn/large/00831rSTgy1gcw2z9vcnoj312805274v.jpg" alt=""></p>
 <p>那么解决方法就很简单了:</p>
 <blockquote>
@@ -347,13 +354,18 @@
 <li>用新数组覆盖旧数组，初始化新数组</li>
 <li>递归就完事儿了</li>
 </ol>
-<h3 id="用到的Methods和一些基本概念"><a href="#用到的Methods和一些基本概念" class="headerlink" title="用到的Methods和一些基本概念"></a>用到的Methods和一些基本概念</h3><ol>
+<h3 id="用到的Methods和一些基本概念"><a class="header-anchor" href="#用到的Methods和一些基本概念">¶</a>用到的Methods和一些基本概念</h3>
+<ol>
 <li>list.append(element) 在list中加入一个元素element</li>
-<li>list[a] 表示列表中索引为a的元素<br><br>list[a:b] 表示列表中索引为a到b-1的所有元素构成的列表<br><br>list[a:] 表示列表中从索引为a到末尾的所有元素构成的列表<br><br>list[:b] 表示列表中从开始到索引为b-1的所有元素构成的列表<br></li>
+<li>list[a] 表示列表中索引为a的元素<br><br>
+list[a:b] 表示列表中索引为a到b-1的所有元素构成的列表<br><br>
+list[a:] 表示列表中从索引为a到末尾的所有元素构成的列表<br><br>
+list[:b] 表示列表中从开始到索引为b-1的所有元素构成的列表<br></li>
 <li>del list[a] 删除列表中索引为a的元素</li>
 </ol>
 <p>想深入学习而且不嫌麻烦的话可以参考<a href="https://docs.python.org/3/tutorial/datastructures.html" target="_blank" rel="noopener">Python Official Tutorial</a>/<a href="https://docs.python.org/zh-cn/3/tutorial/datastructures.html" target="_blank" rel="noopener">中文版</a>。</p>
-<h3 id="具体步骤"><a href="#具体步骤" class="headerlink" title="具体步骤"></a>具体步骤</h3><p>先定义基本变量：<br></p>
+<h3 id="具体步骤"><a class="header-anchor" href="#具体步骤">¶</a>具体步骤</h3>
+<p>先定义基本变量：<br></p>
 <blockquote>
 <p align="left">numberOfPeople —— 圈中剩下的人数，相当于n<br></p>
 <p align="left">stop —— 要报的数，相当于m<br></p>
@@ -363,18 +375,22 @@
 </blockquote>
 <p>这里我们用Python来展示思路。</p>
 <ol>
-<li>输入n、m的值，注意input()函数输入的是字符串，要转化为整数：<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">numberOfPeople = int(input(<span class="string">"n"</span>))</span><br><span class="line">stop = int(input(<span class="string">"m"</span>))</span><br></pre></td></tr></table></figure></li>
-<li>将n个人从1到n编号，储存在一个列表中：这个挺简单的，属于基本功。实现的方法很多，这里仅举一例：<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">peopleCircle = [i <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">1</span>, numberOfPeople + <span class="number">1</span>)]</span><br></pre></td></tr></table></figure></li>
-<li>定义函数，方便递归：<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">josephus</span><span class="params">(numberOfPeople, stop, peopleCircle, outPeople, newPeopleCircle)</span>:</span></span><br><span class="line"> <span class="keyword">if</span> numberOfPeople == <span class="number">1</span>: <span class="comment">#最后剩下一个人</span></span><br><span class="line">     outPeople.append(peopleCircle[<span class="number">0</span>]) <span class="comment">#把最后那个人加上</span></span><br><span class="line">     <span class="keyword">return</span>(outPeople)</span><br><span class="line"> <span class="keyword">else</span>:</span><br><span class="line">     <span class="keyword">pass</span></span><br><span class="line"></span><br><span class="line">     <span class="keyword">return</span> josephus(numberOfPeople - <span class="number">1</span>, stop, peopleCircle, outPeople,newPeopleCircle) <span class="comment">#减去出列的那个人</span></span><br></pre></td></tr></table></figure></li>
-<li>分类讨论1：如果m除以n的余数为0，表示排在最后的人（所对应数字最大的人）出列，这个时候还是从第一个人开始报数，所以列表顺序不变，只需要删除出列人即可：<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> stop % numberOfPeople == <span class="number">1</span>:</span><br><span class="line">    outPeople.append(peopleCircle[numberOfPeople - <span class="number">1</span>]) <span class="comment">#最后那个人出列</span></span><br><span class="line">    <span class="keyword">del</span> peopleCircle[numberOfPeople - <span class="number">1</span>] <span class="comment">#直接去掉最后那个人</span></span><br></pre></td></tr></table></figure></li>
+<li>输入n、m的值，注意input()函数输入的是字符串，要转化为整数：<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">numberOfPeople = int(input(<span class="string">"n"</span>))</span><br><span class="line">stop = int(input(<span class="string">"m"</span>))</span><br></pre></td></tr></table></figure>
+</li>
+<li>将n个人从1到n编号，储存在一个列表中：这个挺简单的，属于基本功。实现的方法很多，这里仅举一例：<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">peopleCircle = [i <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">1</span>, numberOfPeople + <span class="number">1</span>)]</span><br></pre></td></tr></table></figure>
+</li>
+<li>定义函数，方便递归：<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">josephus</span><span class="params">(numberOfPeople, stop, peopleCircle, outPeople, newPeopleCircle)</span>:</span></span><br><span class="line"> <span class="keyword">if</span> numberOfPeople == <span class="number">1</span>: <span class="comment">#最后剩下一个人</span></span><br><span class="line">     outPeople.append(peopleCircle[<span class="number">0</span>]) <span class="comment">#把最后那个人加上</span></span><br><span class="line">     <span class="keyword">return</span>(outPeople)</span><br><span class="line"> <span class="keyword">else</span>:</span><br><span class="line">     <span class="keyword">pass</span></span><br><span class="line"></span><br><span class="line">     <span class="keyword">return</span> josephus(numberOfPeople - <span class="number">1</span>, stop, peopleCircle, outPeople,newPeopleCircle) <span class="comment">#减去出列的那个人</span></span><br></pre></td></tr></table></figure>
+</li>
+<li>分类讨论1：如果m除以n的余数为0，表示排在最后的人（所对应数字最大的人）出列，这个时候还是从第一个人开始报数，所以列表顺序不变，只需要删除出列人即可：<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> stop % numberOfPeople == <span class="number">1</span>:</span><br><span class="line">    outPeople.append(peopleCircle[numberOfPeople - <span class="number">1</span>]) <span class="comment">#最后那个人出列</span></span><br><span class="line">    <span class="keyword">del</span> peopleCircle[numberOfPeople - <span class="number">1</span>] <span class="comment">#直接去掉最后那个人</span></span><br></pre></td></tr></table></figure>
+</li>
 <li>分类讨论2:如果m除以n的余数不为0，那么列表顺序肯定会改变：<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">else</span>:</span><br><span class="line">     outPeople.append(peopleCircle[(stop % numberOfPeople) - <span class="number">1</span>]) <span class="comment">#stop % numberOfPeople 指的是第几个人出列</span></span><br><span class="line">     <span class="keyword">del</span> peopleCircle[(stop % numberOfPeople) - <span class="number">1</span>]</span><br><span class="line">     </span><br><span class="line">     <span class="keyword">for</span> i <span class="keyword">in</span> peopleCircle[(stop % numberOfPeople) - <span class="number">1</span>:numberOfPeople - <span class="number">1</span>]: <span class="comment"># 形成新的环 --通过断点拆成两部分再组合在一起</span></span><br><span class="line">         newPeopleCircle.append(i)</span><br><span class="line">     <span class="keyword">for</span> i <span class="keyword">in</span> peopleCircle[<span class="number">0</span>:(stop % numberOfPeople) - <span class="number">1</span>]:</span><br><span class="line">         newPeopleCircle.append(i)</span><br><span class="line">             </span><br><span class="line">     peopleCircle = newPeopleCircle <span class="comment">#用新环代替旧环</span></span><br><span class="line">     newPeopleCircle = [] <span class="comment">#初始化</span></span><br></pre></td></tr></table></figure>
-
 </li>
 </ol>
 <p>到这里这个程序就完成了，流程会退回到第三步，一直递归然后得出答案。要输出结果的话，在后面加上一个print()函数并调用我们定义的josephus函数就可以了。</p>
-<h3 id="成品代码"><a href="#成品代码" class="headerlink" title="成品代码"></a>成品代码</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">numberOfPeople = int(input(<span class="string">"n"</span>))</span><br><span class="line">stop = int(input(<span class="string">"m"</span>))</span><br><span class="line">peopleCircle = [i <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">1</span>, numberOfPeople + <span class="number">1</span>)]</span><br><span class="line">outPeople = []</span><br><span class="line">newPeopleCircle = []</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">josephus</span><span class="params">(numberOfPeople, stop, peopleCircle, outPeople, newPeopleCircle)</span>:</span></span><br><span class="line">    <span class="keyword">if</span> numberOfPeople == <span class="number">1</span>: <span class="comment">#最后剩下一个人</span></span><br><span class="line">        outPeople.append(peopleCircle[<span class="number">0</span>]) <span class="comment">#把最后那个人加上</span></span><br><span class="line">        <span class="keyword">return</span>(outPeople)</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="keyword">if</span> stop % numberOfPeople == <span class="number">1</span>:</span><br><span class="line">        outPeople.append(peopleCircle[numberOfPeople - <span class="number">1</span>]) <span class="comment">#最后那个人出列</span></span><br><span class="line">        <span class="keyword">del</span> peopleCircle[numberOfPeople - <span class="number">1</span>] <span class="comment">#直接去掉最后那个人</span></span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">        outPeople.append(peopleCircle[(stop % numberOfPeople) - <span class="number">1</span>]) <span class="comment">#stop % numberOfPeople 指的是第几个人出列</span></span><br><span class="line">        <span class="keyword">del</span> peopleCircle[(stop % numberOfPeople) - <span class="number">1</span>]</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> peopleCircle[(stop % numberOfPeople) - <span class="number">1</span>:numberOfPeople - <span class="number">1</span>]: <span class="comment"># 形成新的环 --通过断点拆成两部分再组合在一起</span></span><br><span class="line">            newPeopleCircle.append(i)</span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> peopleCircle[<span class="number">0</span>:(stop % numberOfPeople) - <span class="number">1</span>]:</span><br><span class="line">            newPeopleCircle.append(i)</span><br><span class="line">                </span><br><span class="line">        peopleCircle = newPeopleCircle <span class="comment">#用新环代替旧环</span></span><br><span class="line">        newPeopleCircle = [] <span class="comment">#初始化</span></span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> josephus(numberOfPeople - <span class="number">1</span>, stop, peopleCircle, outPeople,newPeopleCircle) <span class="comment">#减去出列的那个人</span></span><br><span class="line"></span><br><span class="line">print(josephus(numberOfPeople, stop, peopleCircle, outPeople, newPeopleCircle))</span><br></pre></td></tr></table></figure>
-
-<h3 id="最后的最后"><a href="#最后的最后" class="headerlink" title="最后的最后"></a>最后的最后</h3><p>很久不写字了，感觉已经没办法用文字清晰地表达出我的思想。写这篇文章花了我很长时间，一直在想怎么样把我的想法表达清楚。在这个过程中我也在不断完善自己的程序（最开始的程序不长这样，有很多没必要的语句）。希望能帮到别人。<br></p>
+<h3 id="成品代码"><a class="header-anchor" href="#成品代码">¶</a>成品代码</h3>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">numberOfPeople = int(input(<span class="string">"n"</span>))</span><br><span class="line">stop = int(input(<span class="string">"m"</span>))</span><br><span class="line">peopleCircle = [i <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">1</span>, numberOfPeople + <span class="number">1</span>)]</span><br><span class="line">outPeople = []</span><br><span class="line">newPeopleCircle = []</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">josephus</span><span class="params">(numberOfPeople, stop, peopleCircle, outPeople, newPeopleCircle)</span>:</span></span><br><span class="line">    <span class="keyword">if</span> numberOfPeople == <span class="number">1</span>: <span class="comment">#最后剩下一个人</span></span><br><span class="line">        outPeople.append(peopleCircle[<span class="number">0</span>]) <span class="comment">#把最后那个人加上</span></span><br><span class="line">        <span class="keyword">return</span>(outPeople)</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="keyword">if</span> stop % numberOfPeople == <span class="number">1</span>:</span><br><span class="line">        outPeople.append(peopleCircle[numberOfPeople - <span class="number">1</span>]) <span class="comment">#最后那个人出列</span></span><br><span class="line">        <span class="keyword">del</span> peopleCircle[numberOfPeople - <span class="number">1</span>] <span class="comment">#直接去掉最后那个人</span></span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">        outPeople.append(peopleCircle[(stop % numberOfPeople) - <span class="number">1</span>]) <span class="comment">#stop % numberOfPeople 指的是第几个人出列</span></span><br><span class="line">        <span class="keyword">del</span> peopleCircle[(stop % numberOfPeople) - <span class="number">1</span>]</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> peopleCircle[(stop % numberOfPeople) - <span class="number">1</span>:numberOfPeople - <span class="number">1</span>]: <span class="comment"># 形成新的环 --通过断点拆成两部分再组合在一起</span></span><br><span class="line">            newPeopleCircle.append(i)</span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> peopleCircle[<span class="number">0</span>:(stop % numberOfPeople) - <span class="number">1</span>]:</span><br><span class="line">            newPeopleCircle.append(i)</span><br><span class="line">                </span><br><span class="line">        peopleCircle = newPeopleCircle <span class="comment">#用新环代替旧环</span></span><br><span class="line">        newPeopleCircle = [] <span class="comment">#初始化</span></span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> josephus(numberOfPeople - <span class="number">1</span>, stop, peopleCircle, outPeople,newPeopleCircle) <span class="comment">#减去出列的那个人</span></span><br><span class="line"></span><br><span class="line">print(josephus(numberOfPeople, stop, peopleCircle, outPeople, newPeopleCircle))</span><br></pre></td></tr></table></figure>
+<h3 id="最后的最后"><a class="header-anchor" href="#最后的最后">¶</a>最后的最后</h3>
+<p>很久不写字了，感觉已经没办法用文字清晰地表达出我的思想。写这篇文章花了我很长时间，一直在想怎么样把我的想法表达清楚。在这个过程中我也在不断完善自己的程序（最开始的程序不长这样，有很多没必要的语句）。希望能帮到别人。<br></p>
 <p>有兴趣的可以看看其他大佬的解决方法：</p>
 <ol>
 <li><a href="https://www.zhihu.com/question/20065611" target="_blank" rel="noopener">https://www.zhihu.com/question/20065611</a></li>
