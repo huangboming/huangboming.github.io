@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>开始在Github上备份笔记</title>
+    <url>/2020/04/07/%E5%BC%80%E5%A7%8B%E5%9C%A8Github%E4%B8%8A%E8%AE%B0%E7%AC%94%E8%AE%B0/</url>
+    <content><![CDATA[<h2 id="开始在Github上备份笔记"><a class="header-anchor" href="#开始在Github上备份笔记">¶</a>开始在Github上备份笔记</h2>
+<p>最近开始学习各种各样的Python模块，打算在GitHub上备份我的笔记，同时也会将一些文章同步到博客这边。</p>
+<p>传送门：<a href="https://github.com/huangboming/My-Python-Note" target="_blank" rel="noopener">My-Python-Note</a></p>
+<a id="more"></a>]]></content>
+      <tags>
+        <tag>Python-module</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>暴力破解约瑟夫环问题（不用任何数学公式）</title>
     <url>/2020/03/16/%E6%9A%B4%E5%8A%9B%E7%A0%B4%E8%A7%A3%E7%BA%A6%E7%91%9F%E5%A4%AB%E7%8E%AF%E9%97%AE%E9%A2%98%EF%BC%88%E4%B8%8D%E7%94%A8%E4%BB%BB%E4%BD%95%E6%95%B0%E5%AD%A6%E5%85%AC%E5%BC%8F%EF%BC%89/</url>
     <content><![CDATA[<h2 id="暴力破解约瑟夫环问题（不用任何数学公式）"><a class="header-anchor" href="#暴力破解约瑟夫环问题（不用任何数学公式）">¶</a>暴力破解约瑟夫环问题（不用任何数学公式）</h2>
