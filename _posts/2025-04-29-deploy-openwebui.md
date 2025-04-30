@@ -19,7 +19,9 @@ Open WebUI的优势在于，只要有对应模型的API，我们就可以直接�
 
 Open WebUI的[官方文档](https://docs.openwebui.com/getting-started/quick-start/)上提供几种部署方式：Python、Docker、k8s。
 
-我个人比较倾向本机上使用Python安装和部署，而不太喜欢Docker。第一是使用Docker部署调试不是很方便。其次，使用Docker部署网络配置总是会出各种问题，而且持久存储也需要额外配置。我现在的部署方案是在PVE中启动一个单独的CT（Container）部署Open WebUI，并通过Cloudflare Tunnel将服务暴露在公网上，再加上Cloudflare Zero Trust进行身份验证。这里先谈谈如何在CT上部署Open WebUI，Cloudflare相关的在后续的blog中再讲。如果你用的不是PVE系统可以跳过PVE相关部分，直接看后面部署的部分。
+我个人比较倾向本机上使用Python安装和部署，而不太喜欢Docker。第一是使用Docker的方式部署，调试不是很方便。其次，使用Docker部署网络配置容易出各种问题，持久存储也需要额外配置。
+
+我现在的部署方案是在PVE中启动一个单独的CT（Container）部署Open WebUI，并通过Cloudflare Tunnel将服务暴露在公网上，再加上Cloudflare Zero Trust进行身份验证。这里先谈谈如何在CT上部署Open WebUI，Cloudflare相关的在后续的blog中再讲。如果你用的不是PVE系统可以跳过PVE相关部分，直接看后面部署的部分。
 
 ### 创建CT
 
