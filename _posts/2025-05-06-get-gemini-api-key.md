@@ -10,17 +10,17 @@ tags: open-webui
 
 首先，可能也是最重要的一点是，Gemini API免费，而且只需要一个Google账号就能申请，不需要绑卡，也不需要充值，对新手非常友好。
 
-其次，近期发布的Gemini 2.5系列模型能力很强——1M token的上下文窗口（context window），64k token的输出，内置思考（thinking）能力，还支持网络搜索（grouding with Google search）。截止2025年4月30日，Gemini 2.5 Pro Preview在[Livebench](https://livebench.ai/)上排名第四，Gemini 2.5 Flash Preview排名第十。我个人把Gemini 2.5 Flash Preview设成Open WebUI的默认模型。这是我现在最常用的模型。
+其次，近期发布的Gemini 2.5系列模型能力很强——1M token的上下文窗口（context window），64k token的输出，内置思考（thinking）能力，还支持[网络搜索](https://ai.google.dev/gemini-api/docs/grounding)（grouding with Google search）。截止2025年4月30日，Gemini 2.5 Pro Preview在[Livebench](https://livebench.ai/)上排名第四，Gemini 2.5 Flash Preview排名第十。我个人把Gemini 2.5 Flash Preview设成Open WebUI的默认模型。这是我现在最常用的模型。
 
 ![2025年4月30日Livebench排行榜](assets/images/get-gemini-api-key-1.png)
 
 不过免费也有免费的代价。
 
-首先是速率限制（rate limit）。免费用户会受到每分钟请求数（RPM）、每分钟处理Token数（TPM）以及每日请求数（RPD）的限制，具体如下图所示：
+首先是[速率限制](https://ai.google.dev/gemini-api/docs/rate-limits#free-tier)（rate limit）。免费用户会受到每分钟请求数（RPM）、每分钟处理Token数（TPM）以及每日请求数（RPD）的限制，具体如下图所示：
 
 ![免费用户的Gemini使用速率限制](assets/images/get-gemini-api-key-2.png)
 
-对于个人用户来说，这些限制并不算太大的问题，因为一般也用不到这么多。当然如果你是重度用户，又不想花钱，也可以考虑创建多个Google账号并分别申请API key轮流使用。反正创建Google账号本身不需要花钱。
+对于个人用户来说，这些限制并不算太大的问题，因为一般也用不到这么多。如果你是重度用户，又不想花钱，也可以考虑创建多个Google账号并分别申请API key轮流使用。反正创建Google账号本身不需要花钱。
 
 第二，如果你使用免费版的Gemini API key，Google会收集你对话数据用于训练Gemini模型。这一点见仁见智，如果对此有所顾虑，可能需要考虑其他选项，比如付费Gemini API key或者其它模型提供商的API。
 
@@ -41,7 +41,7 @@ tags: open-webui
 
 ![Google AI Studio创建API页面](assets/images/get-gemini-api-key-4.png)
 
-你可以复制API key，保存到一个地方。当然不复制也行，之后可以在这个页面查看你的API key。
+你可以复制API key，保存到一个地方。当然不复制也行，之后可以在这个页面再次查看你的API key。
 
 ![在Google AI Studio创建API页面查看API key](assets/images/get-gemini-api-key-5.png)
 
@@ -57,7 +57,7 @@ tags: open-webui
 
 ### 第一种方式：使用OpenAI API connections
 
-由于[开发者的设计考量](https://github.com/open-webui/open-webui/pull/9241#issuecomment-2629707340)，Open WebUI原生只支持OpenAI格式的API调用，不支持也不打算支持其它提供商的API key调用格式（比如Gemini API key）。但好在[Gemini API key原生兼容OpenAI格式的API调用方式](https://ai.google.dev/gemini-api/docs/openai)，所以我们可以直接通过OpenAI API Connection的方式使用它。
+由于开发者的设计考量[^1]，Open WebUI原生只支持OpenAI格式的API调用，不支持也不打算支持其它提供商的API key调用格式（比如Gemini API key）。但好在[Gemini API key原生兼容OpenAI格式的API调用方式](https://ai.google.dev/gemini-api/docs/openai)，所以我们可以直接通过OpenAI API Connection的方式使用它。
 
 在Open WebUI的外部连接页面，可以配置OpenAI API connection。具体配置方法可以参见[这一篇文章的配置API key部分]({% post_url 2025-04-29-deploy-openwebui %}#配置api-key)。
 
@@ -69,9 +69,9 @@ URL填`https://generativelanguage.googleapis.com/v1beta/openai`，Key填你的AP
 
 ### 第二种方式：使用Open WebUI函数
 
-通过OpenAI API connections配置Gemini API key虽然比较简单，容易上手，但这种方式的一个核心缺点是无法调用Gemini原生支持的[网络搜索功能](https://ai.google.dev/gemini-api/docs/grounding)。根据我的使用体验，Gemini原生支持的网络搜索功能效果比Open WebUI自带的搜索功能（配置Google PSE）更为出色。所以我更推荐使用Open WebUI函数（Function）的方式来配置Gemini API key。
+通过OpenAI API connections配置Gemini API key虽然比较简单，容易上手，但这种方式的一个核心缺点是无法调用Gemini原生支持的网络搜索功能。根据我的使用体验，Gemini原生支持的网络搜索功能效果比Open WebUI自带的搜索功能（配置Google PSE）更为出色。所以我更推荐使用Open WebUI函数（Function）的方式来配置Gemini API key。
 
-根据[Open WebUI官网](https://docs.openwebui.com/features/plugin/functions/)的介绍，Open WebUI函数可以理解为Open WebUI的内置插件，用以拓展其核心能力。
+根据Open WebUI官网的介绍，Open WebUI函数可以理解为Open WebUI的内置插件，用以拓展其核心能力[^2]。
 
 你不需要自己写函数，直接使用别人写好的就行。我使用的是[Gemini Manifold Google_genai](https://openwebui.com/f/suurt8ll/gemini_manifold_google_genai)函数，它原生支持文生图和网络搜索功能。
 
@@ -79,7 +79,7 @@ URL填`https://generativelanguage.googleapis.com/v1beta/openai`，Key填你的AP
 
 在创建函数时，Open WebUI会调用Open WebUI所在虚拟环境中的`pip`安装函数所需要的依赖。于是，在安装函数之前，你需要保证虚拟环境中有`pip`。
 
-一般来说虚拟环境中都会有`pip`，但是使用`uv`创建的虚拟环境中没有`pip`（可能是因为`uv`本身就旨在替代`pip`的功能），你需要手动安装：
+一般来说虚拟环境中都会有`pip`，但是使用`uv`创建的虚拟环境中没有`pip`[^3]，你需要手动安装：
 
 ```shell
 # 在uv创建的虚拟环境下安装pip
@@ -105,9 +105,7 @@ uv pip install pip
 
 #### 2. 配置函数的值
 
-创建好一个主函数和一个辅助函数之后，我们还需要配置函数的值，把我们刚刚申请的Gemini API key放进去。
-
-在Open WebUI中，函数的值（Valves）是函数的输入参数。Valves直译是"阀门"，但不知道为什么官方把它翻译成"值"（Values）。
+创建好一个主函数和一个辅助函数之后，我们还需要配置函数的值（Valves）[^4]，把我们刚刚申请的Gemini API key放进去。
 
 配置方式也很简单，来到函数页面，点击Gemini Manifold google genai函数右边的齿轮，打开值配置页面。刚打开值配置页面时，所有的值都是"默认"值。点击"默认"就会切换到输入框，可以添加值内容。你只需要关注下面几个值：
 
@@ -138,5 +136,13 @@ uv pip install pip
 ## 相关文档
 
 - [Gemini models](https://ai.google.dev/gemini-api/docs/models)：可以查看每个模型的详细信息，包括有哪些模型可以调用，每个模型的上下文窗口大小，输出token数量，支持哪些功能，知识截止日期（knowledge cutoff）等等
-- [Rate limit](https://ai.google.dev/gemini-api/docs/rate-limits#free-tier)：可以查看每个模型的使用速率限制
 
+---
+
+[^1]: 详情请见开发者在pr下的评论：[https://github.com/open-webui/open-webui/pull/9241#issuecomment-2629707340](https://github.com/open-webui/open-webui/pull/9241#issuecomment-2629707340)
+
+[^2]: 参见[https://docs.openwebui.com/features/plugin/functions/](https://docs.openwebui.com/features/plugin/functions/)
+
+[^3]: 可能是因为`uv`本身就旨在替代`pip`的功能
+
+[^4]: 在Open WebUI中，函数的值（Valves）是函数的输入参数。Valves直译是"阀门"，但不知道为什么官方把它翻译成"值"（Values）。
