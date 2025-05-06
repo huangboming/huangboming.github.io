@@ -126,12 +126,6 @@ systemctl status open-webui.service
 
 正常情况下，你应该会看到服务状态显示为`active (running)`。这说明Open WebUI服务已经正常运行。
 
-这里记录一些运维相关的命令：
-- `systemctl status open-webui.service`：查看服务状态
-- `systemctl restart open-webui.service`：重启服务
-- `systemctl stop open-webui.service`：停止服务
-- `journalctl -u open-webui.service -f`：查看Open WebUI的日志
-
 ## 初步配置
 
 部署好Open WebUI之后，使用浏览器访问`http//<主机或者CT的IP地址>:8080`，来到Open WebUI的主页。首次访问时，系统会要求你创建一个管理员账户。输入用户名、邮箱（格式正确即可，无需真实验证）和密码。
@@ -150,6 +144,15 @@ systemctl status open-webui.service
 
 然后在“管理OpenAI API/Manage OpenAI API Connections”连接部分，点击右边的加号，输入相应的API base URL以及API Key，再点击"保存/save"。配置好之后返回主页面，就能看到相应的模型了。
 
+## 运维
+
+部署好服务之后，后续还需要运维。这里记录一下常见的运维命令：
+- 查看服务状态：`systemctl status open-webui.service`
+- 重启服务：`systemctl restart open-webui.service`
+- 停止服务：`systemctl stop open-webui.service`
+- 查看Open WebUI的日志：`journalctl -u open-webui.service -f`
+- 升级Open WebUI到最新版本并重启服务：`uv pip install open-webui --upgrade && systemctl restart open-webui.service`
+
 ## 总结
 
-至此，我们已经在PVE的CT上完成了Open WebUI的安装与运行，并演示了如何将其配置为`systemd`服务，实现开机自启与故障自动重启。
+至此，我们已经在PVE的CT上完成了Open WebUI的安装与运行，并演示了如何将其配置为`systemd`服务，实现开机自启与故障自动重启。最后还记录了一些常见的运维命令。
