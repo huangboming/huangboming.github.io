@@ -55,21 +55,21 @@ Adapt the summary style to the nature of the text (e.g., academic tone for resea
 
 操作很简单：在Open WebUI对话框中输入`#`，紧接着粘贴或输入目标网址，回车即可。Open WebUI便会自动抓取页面文本。比如说，要阅读[这篇博客](https://notashelf.dev/posts/curse-of-knowing)，可以在对话框中输入`#https://notashelf.dev/posts/curse-of-knowing`，然后回车。
 
-![输入# + 文章URL](assets/images/using-ai-for-pre-reading-1.png)
+![输入# + 文章URL](assets/images/using-ai-for-pre-reading/1.png)
 *输入“#”和目标网址*
 
-![输入# + 文章URL后回车](assets/images/using-ai-for-pre-reading-2.png)
+![输入# + 文章URL后回车](assets/images/using-ai-for-pre-reading/2.png)
 *回车后，Open WebUI自动抓取网页内容*
 
 接着，将前述的AI略读提示词输入对话框并发送，让AI先理解、总结文章：
 
-![输入AI略读提示词](assets/images/using-ai-for-pre-reading-3.png)
+![输入AI略读提示词](assets/images/using-ai-for-pre-reading/3.png)
 *发送AI略读提示词*
 
 
 最后，再补上一句“用大白话解释”：
 
-![输入“用大白话解释”](assets/images/using-ai-for-pre-reading-4.png)
+![输入“用大白话解释”](assets/images/using-ai-for-pre-reading/4.png)
 *发送“用大白话解释”指令后，AI输出通俗易懂的解释*
 
 可以看到AI生成的解释通俗易懂，核心内容一目了然。
@@ -82,10 +82,10 @@ Adapt the summary style to the nature of the text (e.g., academic tone for resea
 
 下面以[The Leaderboard Illusion](https://arxiv.org/abs/2504.20879)这篇论文为例。
 
-![上传pdf文件](assets/images/using-ai-for-pre-reading-5.png)
+![上传pdf文件](assets/images/using-ai-for-pre-reading/5.png)
 *在Google AI Studio上传PDF文件*
 
-![AI略读提示词 + “用大白话解释”之后的效果](assets/images/using-ai-for-pre-reading-6.png)
+![AI略读提示词 + “用大白话解释”之后的效果](assets/images/using-ai-for-pre-reading/6.png)
 *使用AI略读提示词及“用大白话解释”指令后的输出效果*
 
 ## 总结
