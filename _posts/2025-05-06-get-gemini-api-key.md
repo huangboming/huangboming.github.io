@@ -13,12 +13,14 @@ tags: open-webui
 其次，近期发布的Gemini 2.5系列模型能力很强——1M token的上下文窗口（context window），64k token的输出，内置思考（thinking）能力，还支持[网络搜索](https://ai.google.dev/gemini-api/docs/grounding)（grouding with Google search）。截止2025年4月30日，Gemini 2.5 Pro Preview在[Livebench](https://livebench.ai/)上排名第四，Gemini 2.5 Flash Preview排名第十。我个人把Gemini 2.5 Flash Preview设成Open WebUI的默认模型。这是我现在最常用的模型。
 
 ![2025年4月30日Livebench排行榜](assets/images/get-gemini-api-key/1.png)
+*2025年4月30日Livebench排行榜*
 
 不过免费也有免费的代价。
 
 首先是[速率限制](https://ai.google.dev/gemini-api/docs/rate-limits#free-tier)（rate limit）。免费用户会受到每分钟请求数（RPM）、每分钟处理Token数（TPM）以及每日请求数（RPD）的限制，具体如下图所示：
 
 ![免费用户的Gemini使用速率限制](assets/images/get-gemini-api-key/2.png)
+*免费用户的Gemini使用速率限制*
 
 对于个人用户来说，这些限制并不算太大的问题，因为一般也用不到这么多。如果你是重度用户，又不想花钱，也可以考虑创建多个Google账号并分别申请API key轮流使用。反正创建Google账号本身不需要花钱。
 
@@ -36,14 +38,17 @@ tags: open-webui
 首先，用浏览器访问[Google AI Studio](https://aistudio.google.com/)。进入页面之后，点击上方的"Get API key"。
 
 ![Google AI Studio主页](assets/images/get-gemini-api-key/3.png)
+*Google AI Studio主页*
 
 进入API keys页面后，点击"Create API key"，API key就创建好了。就这么简单，不需要什么复杂操作。
 
 ![Google AI Studio创建API页面](assets/images/get-gemini-api-key/4.png)
+*Google AI Studio创建API页面*
 
 你可以复制API key，保存到一个地方。当然不复制也行，之后可以在这个页面再次查看你的API key。
 
 ![在Google AI Studio创建API页面查看API key](assets/images/get-gemini-api-key/5.png)
+*在Google AI Studio创建API页面查看API key*
 
 需要注意，一定要保管好自己的API，不要泄露给任何人。一旦泄露，他人可能滥用你的API密钥，导致不必要的麻烦。
 
@@ -62,6 +67,7 @@ tags: open-webui
 在Open WebUI的外部连接页面，可以配置OpenAI API connection。具体配置方法可以参见[这一篇文章的配置API key部分]({% post_url 2025-04-29-deploy-openwebui %}#配置api-key)。
 
 ![Open WebUI外部连接配置页面](assets/images/get-gemini-api-key/6.png)
+*Open WebUI外部连接配置页面*
 
 URL填`https://generativelanguage.googleapis.com/v1beta/openai`，Key填你的API key。Model IDs部分可以不填，如果不填意味着Open WebUI会自动获取所有可用的模型；也可以自己到[Gemini模型页面](https://ai.google.dev/gemini-api/docs/models)上去找到自己想用的模型ID。比如Gemini 2.5 Flash Preview 04-17的模型ID是`models/gemini-2.5-flash-preview-04-17`。
 
@@ -91,16 +97,19 @@ uv pip install pip
 首先来到管理员面板，选择上方的函数，来到函数页面。然后点击右边的加号，添加新函数。
 
 ![Open WebUI函数页面](assets/images/get-gemini-api-key/7.png)
+*Open WebUI函数页面*
 
 在创建函数页面，函数名称填`Gemini Manifold google genai`，函数描述填`Manifold function for Gemini Developer API. Supports native image generation, grounding with Google Search and streaming. Uses google-genai.`。然后访问Gemini Manifold Google_genai函数的[源代码](https://raw.githubusercontent.com/suurt8ll/open_webui_functions/refs/heads/master/plugins/pipes/gemini_manifold.py)，复制所有代码，粘贴到Open WebUI页面的函数代码处。
 
 ![配置Gemini Manifold google genai函数](assets/images/get-gemini-api-key/8.png)
+*配置Gemini Manifold google genai函数，需要填写函数名称、描述和代码*
 
 根据Gemini Manifold Google_genai项目的[文档](https://github.com/suurt8ll/open_webui_functions/blob/master/docs/plugins/pipes/gemini_manifold.md)，如果你想使用Gemini API自带的网页搜索功能，除了安装Gemini Manifold Google_genai函数之外，你还需要安装一个辅助函数Gemini Manifold Companion。
 
 和刚刚一样，在函数页面创建一个新的函数。函数名填`Gemini Manifold Companion`，函数描述填`A companion filter for "Gemini Manifold google_genai" pipe providing enhanced functionality.`。然后访问Gemini Manifold Companion的[源代码](https://github.com/suurt8ll/open_webui_functions/raw/refs/heads/master/plugins/filters/gemini_manifold_companion.py)，复制所有代码，粘贴到Open WebUI页面的函数代码处。
 
 ![配置Gemini Manifold Companion辅助函数](assets/images/get-gemini-api-key/9.png)
+*配置Gemini Manifold Companion辅助函数*
 
 
 #### 2. 配置函数的值
@@ -115,6 +124,7 @@ uv pip install pip
 - `Emit Status Updates`：可以看到模型当前的状态（思考中或者是联网搜索中），建议开启
 
 ![Gemini Manifold google genai值配置](assets/images/get-gemini-api-key/10.png)
+*Gemini Manifold google genai值配置*
 
 配置好之后，点击保存就大功告成了。
 
@@ -123,6 +133,7 @@ uv pip install pip
 通过这种方式配置Gemini API key，你可以直接使用API自带的联网搜索功能，而不需要额外在Open WebUI中配置搜索引擎。你可以返回主页面，试试与模型对话，以及搜索功能。
 
 ![测试Gemini网络搜索功能](assets/images/get-gemini-api-key/11.png)
+*测试Gemini网络搜索功能*
 
 ## 总结
 
