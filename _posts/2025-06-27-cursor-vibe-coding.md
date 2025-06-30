@@ -117,7 +117,7 @@ MCP（Model Context Protocol，模型上下文协议）是一个协议，允许 
 
 具体的配置方式可以参考 [Cursor 的官方文档](https://docs.cursor.com/context/model-context-protocol)。我的 MCP 服务器配置如下图：
 
-[assets/images/cursor-vibe-coding/1.png]
+![MCP 配置](assets/images/cursor-vibe-coding/1.png)
 
 #### Context 7
 
@@ -202,7 +202,8 @@ MCP（Model Context Protocol，模型上下文协议）是一个协议，允许 
 
 每次需求最好新启动一个会话，清空会话框所有的 Context，引入必要的项目文档（比如代码风格、前端架构文档等等），再配合上面的提示词开始一次任务。最好不要引入具体的代码文件，特别是很长的代码文件，这会污染上下文窗口。
 
-[assets/images/cursor-vibe-coding/2.png]
+![上下文管理](assets/images/cursor-vibe-coding/2.png)
+*注意清空会话框所有的 Context*
 
 #### 代码重构
 
