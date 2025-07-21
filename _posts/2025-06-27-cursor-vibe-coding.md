@@ -3,7 +3,7 @@ layout: post
 title: Cursor Vibe Coding心得分享
 date: 2025-06-27
 categories: llm
-tags: cursor vibe-coding llm
+tags: cursor vibe-coding llm prompt-engineering
 ---
 
 最近在使用 Cursor pro 从零开始设计并编写一个项目（React 前端 + FastAPI 后端 + Tauri 打包），完全 vibe coding，几乎没有手写一行代码。
