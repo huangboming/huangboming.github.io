@@ -111,6 +111,12 @@ uv pip install pip
 ![配置Gemini Manifold Companion辅助函数](assets/images/get-gemini-api-key/9.png)
 *配置Gemini Manifold Companion辅助函数*
 
+（2025-07-28补充）
+配置好之后，你还需要全局应用Gemini Manifold Companion辅助函数，让它在全局生效，而不需要在每一个Gemini模型页面下手动开启。配置按钮如下图：
+
+![全局应用Gemini Manifold Companion辅助函数](assets/images/get-gemini-api-key/12.png)
+*全局应用Gemini Manifold Companion辅助函数*
+
 
 #### 2. 配置函数的值
 
@@ -131,6 +137,11 @@ uv pip install pip
 #### 3. 测试
 
 通过这种方式配置Gemini API key，你可以直接使用API自带的联网搜索功能，而不需要额外在Open WebUI中配置搜索引擎。你可以返回主页面，试试与模型对话，以及搜索功能。
+
+（2025-07-28补充）
+要使用Open WebUI的网络搜索功能，你需要先打开网络搜索功能开关，具体的位置见下图：
+![打开Open WebUI网络搜索功能](assets/images/get-gemini-api-key/13.png)
+*打开Open WebUI网络搜索功能*
 
 ![测试Gemini网络搜索功能](assets/images/get-gemini-api-key/11.png)
 *测试Gemini网络搜索功能*
