@@ -3,7 +3,9 @@ layout: post
 title: Cursor Vibe Coding心得分享
 date: 2025-06-27
 categories: 技术
-tags: AI
+tags: [AI]
+description: 分享使用 Cursor Agent 进行 vibe coding 的心得，包括任务拆解、上下文管理、MCP 工具配置以及文档驱动开发的最佳实践。
+media_subpath: /assets/images/cursor-vibe-coding/
 ---
 
 最近在使用 Cursor pro 从零开始设计并编写一个项目（React 前端 + FastAPI 后端 + Tauri 打包），完全 vibe coding，几乎没有手写一行代码。
@@ -117,7 +119,7 @@ MCP（Model Context Protocol，模型上下文协议）是一个协议，允许 
 
 具体的配置方式可以参考 [Cursor 的官方文档](https://docs.cursor.com/context/model-context-protocol)。我的 MCP 服务器配置如下图：
 
-![MCP 配置](assets/images/cursor-vibe-coding/1.png)
+![MCP 配置](1.png){: .shadow w="700" h="448" }
 
 #### Context 7
 
@@ -202,7 +204,7 @@ MCP（Model Context Protocol，模型上下文协议）是一个协议，允许 
 
 每次需求最好新启动一个会话，清空会话框所有的 Context，引入必要的项目文档（比如代码风格、前端架构文档等等），再配合上面的提示词开始一次任务。最好不要引入具体的代码文件，特别是很长的代码文件，这会污染上下文窗口。
 
-![上下文管理](assets/images/cursor-vibe-coding/2.png)
+![上下文管理](2.png){: .shadow w="700" h="1358" }
 *注意清空会话框所有的 Context*
 
 #### 代码重构

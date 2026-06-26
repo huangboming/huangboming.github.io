@@ -3,7 +3,9 @@ layout: post
 title: 使用 Docker Context + SSH 访问远端 Docker Daemon
 date: 2025-07-01
 categories: 技术
-tags: 开发环境 DevOps
+tags: [开发环境, DevOps]
+description: 通过 Docker Context + SSH 让本地 docker 客户端远程操控服务器 dockerd，告别 Docker Desktop 的高内存占用和跨架构编译烦恼。
+media_subpath: /assets/images/remote-docker/
 ---
 
 在 Windows 或者 macOS 上使用 Docker Desktop 时，Docker Desktop 会创建一个轻量级虚拟机来运行 Docker 守护进程（Docker daemon， `dockerd`）。这相当消耗内存和 CPU 资源。我在 Mac 上只是启动 Docker Desktop，没有运行任何 container 就消耗了 2GB 内存。
@@ -20,7 +22,8 @@ tags: 开发环境 DevOps
 
 我们日常在终端里使用的 `docker` 命令，其实是 Docker 客户端。它负责将指令发送给 Docker 守护进程（`dockerd`），后者则负责管理镜像、容器、网络和存储等资源。
 
-![docker 架构图](https://docs.docker.com/get-started/images/docker-architecture.webp)
+![docker 架构图](1.webp){: w="700" h="370" }
+*Docker C/S 架构（来源：Docker 官方文档）*
 
 既然它是 c/s 架构，那么客户端与守护进程就不必非得在同一台机器上。我们完全可以让本地的 `docker` 客户端，通过网络，与远程服务器上的 `dockerd` 通信。
 
@@ -69,7 +72,7 @@ ssh -i ~/.ssh/ubuntu ubuntu@192.168.31.100
 
 编辑（如果不存在则创建）`~/.ssh/config` 文件，在文件末尾添加以下内容：
 
-```
+```plaintext
 # Host <服务器别名>
 #     HostName <服务器地址>
 #     User <服务器用户名>

@@ -3,7 +3,9 @@ layout: post
 title: 在 Open WebUI 中使用 Gemini 2.5 TTS 模型
 date: 2025-06-25
 categories: 技术
-tags: AI 自建服务
+tags: [AI, 自建服务]
+description: 介绍如何将 Gemini 2.5 TTS 模型通过自建转换服务集成到 Open WebUI 中，实现自然流畅的语音朗读。
+media_subpath: /assets/images/using-gemini-tts-in-open-webui/
 ---
 
 在今年的 I/O 大会上，Google 推出了 Gemini 2.5 系列 TTS (text-to-speech) 模型的预览版，包括 Gemini 2.5 Flash 和 Gemini 2.5 Pro。用户可以在 [AI Studio](https://aistudio.google.com/generate-speech) 上免费体验。免费层级的 AI Studio API 用户也有一定的试用额度，具体可参见[官方文档](https://ai.google.dev/gemini-api/docs/rate-limits#free-tier)。
@@ -75,6 +77,7 @@ Open WebUI 的配置过程与设置标准的 OpenAI TTS 类似，只需修改 AP
 
 一个配置示例如下：
 
-![Open WebUI TTS 配置示例](assets/images/using-gemini-tts-in-open-webui/1.png)
+![Open WebUI TTS 配置示例](1.png){: w="1348" h="1202" .shadow}
+*Open WebUI TTS 配置界面*
 
 最后有一个小提示：如果你使用的是免费层级的 Gemini API key，建议将“拆分回复“选项设置为 `paragraphs` (段落) 或 `none` (不拆分)。因为免费版 API 每分钟的请求次数有限（3次/分钟，15次/天），如果按句子拆分，很容易超出额度。

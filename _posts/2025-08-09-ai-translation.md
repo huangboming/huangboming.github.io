@@ -3,7 +3,9 @@ layout: post
 title: AI 翻译阅读
 date: 2025-08-09
 categories: 学习与研究
-tags: 人工智能 阅读
+tags: [人工智能, 阅读]
+description: 分享使用 Gemini 2.5 Pro 进行整书级 AI 翻译的完整流程，包括模型选择、书籍格式转换与翻译提示词撰写心得。
+media_subpath: /assets/images/ai-translation/
 ---
 
 这是读书爱好者的好时代。
@@ -76,17 +78,17 @@ brew install --cask calibre
 
 安装好之后，运行 Calibre，你会看到一个很复古的页面。点击左上角菜单栏的 "Add book" 按钮，从文件系统中导入电子书。
 
-![Calibre 主页面](assets/images/ai-translation/1.png)
+![Calibre 主页面](1.png){: .shadow w="700" h="447" }
 *Calibre 主页面*
 
 然后，在书籍列表中选中这本书，点击菜单栏 "Add book" 右侧的 "Convert books"（见上图）。在弹出窗口的右上角，找到 "Output format"，选择你想要转换的格式（PDF 或 TXT），然后点击右下角的 "OK" 按钮，开始格式转换。
 
-![转换书籍页面](assets/images/ai-translation/2.png)
+![转换书籍页面](2.png){: .shadow w="700" h="443" }
 *转换书籍页面*
 
 你可以在 Calibre 主页的右下角 "Jobs" 处看到进度。格式转换完成之后，在书籍列表中选中这本书。右键打开上下文菜单，选择 "Save to disk -> Single format to disk"。在弹出的窗口中选择转换后的格式，把转换后的书籍保存到选定路径下。
 
-![保存转换后的书籍](assets/images/ai-translation/3.png)
+![保存转换后的书籍](3.png){: .shadow w="700" h="430" }
 *保存转换后的书籍*
 
 对于格式选择，我有两个建议：
@@ -105,7 +107,7 @@ brew install --cask calibre
 
 访问 [Google AI Studio](https://aistudio.google.com/prompts/new_chat)，在右侧 Run settings 中，设置模型为 Gemini 2.5 Pro。然后，点击上方工具栏的第一个图标，设置系统提示词（system prompt）。
 
-![AI Studio 中设置系统提示词](assets/images/ai-translation/4.png)
+![AI Studio 中设置系统提示词](4.png){: .shadow w="700" h="412" }
 *AI Studio 中设置系统提示词*
 
 使用[审美与提示词书写]({% post_url 2025-07-21-aesthetics-and-prompting %})中的方法论，我撰写了一份翻译系统提示词。你可以直接复制使用：
