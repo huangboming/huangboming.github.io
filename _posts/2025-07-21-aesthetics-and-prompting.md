@@ -2,8 +2,8 @@
 layout: post
 title: 审美与提示词书写
 date: 2025-07-21
-categories: llm
-tags: prompt-engineering llm
+categories: 技术
+tags: 人工智能
 ---
 
 在使用AI时，我们常常遇到这样的情况：明明给出详细的指令，但 AI 生成的结果质量却不稳定——有时让人眼前一亮，但有时却不尽如人意。它给出的结果或许正确，但是不那么好。例如，让 AI 翻译一篇文章，它可能给出一份语法正确但生硬的译文。

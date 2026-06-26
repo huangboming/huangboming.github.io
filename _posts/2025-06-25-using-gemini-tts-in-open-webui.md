@@ -2,8 +2,8 @@
 layout: post
 title: 在 Open WebUI 中使用 Gemini 2.5 TTS 模型
 date: 2025-06-25
-categories: llm
-tags: open-webui
+categories: 技术
+tags: AI 自建服务
 ---
 
 在今年的 I/O 大会上，Google 推出了 Gemini 2.5 系列 TTS (text-to-speech) 模型的预览版，包括 Gemini 2.5 Flash 和 Gemini 2.5 Pro。用户可以在 [AI Studio](https://aistudio.google.com/generate-speech) 上免费体验。免费层级的 AI Studio API 用户也有一定的试用额度，具体可参见[官方文档](https://ai.google.dev/gemini-api/docs/rate-limits#free-tier)。

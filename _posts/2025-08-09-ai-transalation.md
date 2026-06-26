@@ -2,8 +2,8 @@
 layout: post
 title: AI 翻译阅读
 date: 2025-08-09
-categories: llm
-tags: llm 翻译
+categories: 学习与研究
+tags: 人工智能 阅读
 ---
 
 这是读书爱好者的好时代。

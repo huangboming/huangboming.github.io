@@ -2,8 +2,8 @@
 layout: post
 title: 在PVE上使用CT部署Open WebUI服务
 date: 2025-04-29
-categories: llm
-tags: open-webui
+categories: 技术
+tags: AI 自建服务
 ---
 
 ## 什么是Open WebUI

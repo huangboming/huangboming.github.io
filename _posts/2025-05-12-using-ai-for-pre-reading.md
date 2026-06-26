@@ -2,8 +2,8 @@
 layout: post
 title: 我的AI略读方法论
 date: 2025-05-12
-categories: llm
-tags: open-webui reading prompts
+categories: 学习与研究
+tags: AI 阅读
 ---
 
 我习惯用RSS订阅各种信息源，并且每天花一些时间筛选我感兴趣的内容来阅读。为此，我还为自己制作了一份[Hugging face daily paper的RSS feed](https://github.com/huangboming/huggingface-daily-paper-feed)。

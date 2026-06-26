@@ -2,8 +2,8 @@
 layout: post
 title: 申请Gemini API key并在Open WebUI中配置使用
 date: 2025-05-06
-categories: llm
-tags: open-webui
+categories: 技术
+tags: AI 自建服务
 ---
 
 部署好Open WebUI之后，下一步就是为它接入语言模型。对于初学者，我最推荐的是Gemini。

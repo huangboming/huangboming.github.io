@@ -2,8 +2,8 @@
 layout: post
 title: 使用 Docker Context + SSH 访问远端 Docker Daemon
 date: 2025-07-01
-categories: 开发环境
-tags: docker 开发环境 DevOps
+categories: 技术
+tags: 开发环境 DevOps
 ---
 
 在 Windows 或者 macOS 上使用 Docker Desktop 时，Docker Desktop 会创建一个轻量级虚拟机来运行 Docker 守护进程（Docker daemon， `dockerd`）。这相当消耗内存和 CPU 资源。我在 Mac 上只是启动 Docker Desktop，没有运行任何 container 就消耗了 2GB 内存。
