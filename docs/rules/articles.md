@@ -39,6 +39,7 @@ description: <文章摘要>
 - 技术
 - 旅游
 - 学习与研究
+- 行动
 
 ### `tags`
 
@@ -53,6 +54,8 @@ description: <文章摘要>
 - DevOps
 - 香港
 - 阅读
+- 成长
+- 思考
 
 ### `description`（推荐）
 
