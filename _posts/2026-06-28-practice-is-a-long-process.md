@@ -2,8 +2,8 @@
 layout: post
 title: 践行是一个漫长的过程
 date: 2026-06-28
-categories: 行动
-tags: [成长, 思考]
+categories: 随笔
+tags: [思考]
 description: 为什么听过很多道理，依然过不好这一生？践行不是简单的"知道就去做"，从知道到内心真正改变，是一条漫长的路。
 ---
 

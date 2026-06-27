@@ -2,8 +2,8 @@
 layout: post
 title: AI 翻译阅读
 date: 2025-08-09
-categories: 学习与研究
-tags: [人工智能, 阅读]
+categories: 心得
+tags: [AI, 阅读, 翻译]
 description: 分享使用 Gemini 2.5 Pro 进行整书级 AI 翻译的完整流程，包括模型选择、书籍格式转换与翻译提示词撰写心得。
 media_subpath: /assets/images/ai-translation/
 ---

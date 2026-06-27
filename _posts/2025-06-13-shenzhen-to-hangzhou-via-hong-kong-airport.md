@@ -2,8 +2,8 @@
 layout: post
 title: 深圳出发，经香港机场往返杭州
 date: 2025-06-13
-categories: 旅游
-tags: [香港]
+categories: 随笔
+tags: [旅行]
 description: 分享从深圳出发经香港机场往返杭州的详细通关记录，包括出行前准备、交通路线、避坑经验，以及全程费用与时间总结。
 media_subpath: /assets/images/shenzhen-to-hangzhou-via-hong-kong-airport/
 ---

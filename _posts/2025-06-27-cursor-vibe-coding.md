@@ -2,8 +2,8 @@
 layout: post
 title: Cursor Vibe Coding心得分享
 date: 2025-06-27
-categories: 技术
-tags: [AI]
+categories: 心得
+tags: [AI, 开发工具]
 description: 分享使用 Cursor Agent 进行 vibe coding 的心得，包括任务拆解、上下文管理、MCP 工具配置以及文档驱动开发的最佳实践。
 media_subpath: /assets/images/cursor-vibe-coding/
 ---

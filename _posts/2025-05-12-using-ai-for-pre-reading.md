@@ -2,8 +2,8 @@
 layout: post
 title: 我的AI略读方法论
 date: 2025-05-12
-categories: 学习与研究
-tags: [AI, 阅读]
+categories: 心得
+tags: [AI, 提示词, 阅读]
 description: 分享一套用AI略读文章的方法论：用结构化提示词引导AI深度理解原文，再用"用大白话解释"获取通俗易懂的核心内容。
 media_subpath: /assets/images/using-ai-for-pre-reading/
 ---

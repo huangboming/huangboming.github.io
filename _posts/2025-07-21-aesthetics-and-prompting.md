@@ -2,8 +2,8 @@
 layout: post
 title: 审美与提示词书写
 date: 2025-07-21
-categories: 技术
-tags: [人工智能]
+categories: 心得
+tags: [AI, 提示词]
 description: 分享将隐性的审美标准转化为显性提示词指令的方法——通过"信达雅"翻译标准等案例，介绍两套将审美融入提示词的实用技巧。
 media_subpath: /assets/images/aesthetics-and-prompting/
 ---

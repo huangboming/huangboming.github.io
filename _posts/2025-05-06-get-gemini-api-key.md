@@ -2,7 +2,7 @@
 layout: post
 title: 申请Gemini API key并在Open WebUI中配置使用
 date: 2025-05-06
-categories: 技术
+categories: 教程
 tags: [AI, 自建服务]
 media_subpath: /assets/images/get-gemini-api-key/
 description: 手把手教你免费申请Gemini API key，并通过OpenAI API connections和Open WebUI函数两种方式在Open WebUI中配置使用，同时介绍如何开启Gemini原生的联网搜索功能。

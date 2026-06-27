@@ -2,7 +2,7 @@
 layout: post
 title: 在PVE上使用CT部署Open WebUI服务
 date: 2025-04-29
-categories: 技术
+categories: 教程
 tags: [AI, 自建服务]
 description: 在 Proxmox VE 的 CT 容器中部署 Open WebUI，并配置为 systemd 服务实现开机自启与故障自动重启。
 media_subpath: /assets/images/deploy-openwebui/

@@ -2,8 +2,8 @@
 layout: post
 title: 使用 Docker Context + SSH 访问远端 Docker Daemon
 date: 2025-07-01
-categories: 技术
-tags: [开发环境, DevOps]
+categories: 教程
+tags: [开发工具]
 description: 通过 Docker Context + SSH 让本地 docker 客户端远程操控服务器 dockerd，告别 Docker Desktop 的高内存占用和跨架构编译烦恼。
 media_subpath: /assets/images/remote-docker/
 ---

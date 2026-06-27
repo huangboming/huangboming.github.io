@@ -2,7 +2,7 @@
 layout: post
 title: 在 Open WebUI 中使用 Gemini 2.5 TTS 模型
 date: 2025-06-25
-categories: 技术
+categories: 教程
 tags: [AI, 自建服务]
 description: 介绍如何将 Gemini 2.5 TTS 模型通过自建转换服务集成到 Open WebUI 中，实现自然流畅的语音朗读。
 media_subpath: /assets/images/using-gemini-tts-in-open-webui/
