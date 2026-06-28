@@ -9,6 +9,8 @@
 - **Git**
 - **Ruby**（推荐使用 rbenv 管理，见下文）
 - **Bundler**
+- **pngquant** — PNG 截图压缩（`brew install pngquant`）
+- **webp** — 照片转 WebP 格式（`brew install webp`）
 
 ### 安装 Ruby（rbenv）
 
