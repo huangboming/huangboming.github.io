@@ -42,15 +42,15 @@ rbenv install -l
 选择最新的稳定版本（以 `3.4` 为例），安装并设为全局默认：
 
 ```shell
-rbenv install 3.4.3
-rbenv global 3.4.3
+rbenv install 3.4.1
+rbenv global 3.4.1
 ```
 
 验证安装：
 
 ```shell
 ruby -v
-# 应输出类似：ruby 3.4.3 ...
+# 应输出类似：ruby 3.4.1 ...
 which ruby
 # 应指向 ~/.rbenv/shims/ruby
 ```
@@ -71,7 +71,7 @@ bundle install
 
 > **提示：** 项目根目录下的 `.ruby-version` 文件可以固定 Ruby 版本号。进入项目目录后，rbenv 会自动切换到该版本。你可以手动创建此文件：
 > ```shell
-> echo "3.4.3" > .ruby-version
+> echo "3.4.1" > .ruby-version
 > ```
 
 ## 本地预览
