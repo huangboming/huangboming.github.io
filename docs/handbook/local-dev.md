@@ -9,6 +9,7 @@
 - **Git**
 - **Ruby**（推荐使用 rbenv 管理，见下文）
 - **Bundler**
+- **ImageMagick** — 图片格式转换与裁剪（`brew install imagemagick`）
 - **pngquant** — PNG 截图压缩（`brew install pngquant`）
 - **webp** — 照片转 WebP 格式（`brew install webp`）
 
