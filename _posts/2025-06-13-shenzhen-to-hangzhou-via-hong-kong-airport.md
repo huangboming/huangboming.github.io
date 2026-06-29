@@ -118,11 +118,11 @@ media_subpath: /assets/images/shenzhen-to-hangzhou-via-hong-kong-airport/
 
 香港机场有[离境税](https://www.hongkongairport.com/sc/passenger-guide/departures/air-passenger-departure-tax.page)——搭乘飞机离开香港，一般需要缴120港币的离境税。一般来说，这笔税会包含在机票价格中。
 
-最近有[新闻](https://finance.sina.com.cn/stock/hkstock/hkstocknews/2025-06-11/doc-inezsutk8032190.shtml)称，港府草拟[《2025年飞机乘客离境税条例(修订附表2)令](https://www.info.gov.hk/gia/general/202506/11/P2025061100326.htm?fontSize=3)，打算扩大离境税豁免范围。其中有一条是：
+最近有[新闻](https://finance.sina.com.cn/stock/hkstock/hkstocknews/2025-06-11/doc-inezsutk8032190.shtml)称，港府草拟[《2025年飞机乘客离境税条例(修订附表2)令》](https://www.info.gov.hk/gia/general/202506/11/P2025061100326.htm?fontSize=3)，打算扩大离境税豁免范围。其中有一条是：
 
 > 以乘搭飞机以外的方式经过出入境检查抵达香港，然后于抵达当日或下一日于机场乘搭飞机离境的乘客(即最多四十八小时)。条例将加入豁除条文，以防止个别人士刻意在短时间内往返香港和内地或澳门以符合豁免离境税资格。
 
-如果我没有理解错，这一条包括我们这些从深圳到香港机场搭乘飞机飞内地的乘客。这样一看，好像从香港飞内地的性价比又更高了。希望这项修订令能够通过立法会并在今天10月1日生效。
+如果我没有理解错，这一条包括我们这些从深圳到香港机场搭乘飞机飞内地的乘客。这样一看，好像从香港飞内地的性价比又更高了。希望这项修订令能够通过立法会并在今年10月1日生效。
 
 ---
 
