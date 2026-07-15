@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 我的AI略读方法论
+title: 分享一套 AI 略读方法论
 date: 2025-05-12
 categories: 心得
 tags: [AI, 提示词, 阅读]
