@@ -80,4 +80,4 @@ Open WebUI 的配置过程与设置标准的 OpenAI TTS 类似，只需修改 AP
 ![Open WebUI TTS 配置示例](1.png){: w="1348" h="1202" .shadow}
 *Open WebUI TTS 配置界面*
 
-最后有一个小提示：如果你使用的是免费层级的 Gemini API key，建议将“拆分回复“选项设置为 `paragraphs` (段落) 或 `none` (不拆分)。因为免费版 API 每分钟的请求次数有限（3次/分钟，15次/天），如果按句子拆分，很容易超出额度。
+最后有一个小提示：如果你使用的是免费层级的 Gemini API key，建议将“拆分回复”选项设置为 `paragraphs` (段落) 或 `none` (不拆分)。因为免费版 API 每分钟的请求次数有限（3 次/分钟，15 次/天），如果按句子拆分，很容易超出额度。
