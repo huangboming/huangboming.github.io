@@ -1,0 +1,34 @@
+{% assign recommendation = include.recommendation %}
+
+{% case recommendation.kind %}
+  {% when 'book' %}
+    {% assign kind_label = '书籍' %}
+    {% assign kind_icon = 'fas fa-book' %}
+  {% when 'article' %}
+    {% assign kind_label = '文章' %}
+    {% assign kind_icon = 'far fa-file-lines' %}
+  {% when 'video' %}
+    {% assign kind_label = '视频' %}
+    {% assign kind_icon = 'fas fa-circle-play' %}
+  {% else %}
+    {% assign kind_label = recommendation.kind %}
+    {% assign kind_icon = 'far fa-bookmark' %}
+{% endcase %}
+
+<article class="recommendation-item">
+  <div class="recommendation-meta">
+    <time datetime="{{ recommendation.added_at | escape }}">
+      {{ recommendation.added_at | date: '%Y-%m-%d' }}
+    </time>
+    <span class="recommendation-separator" aria-hidden="true">·</span>
+    <span class="recommendation-kind recommendation-kind--{{ recommendation.kind | escape }}">
+      <i class="{{ kind_icon }}" aria-hidden="true"></i>{{ kind_label | escape }}
+    </span>
+  </div>
+  <h2 class="recommendation-title">
+    <a href="{{ recommendation.url | escape }}" target="_blank" rel="noopener noreferrer">
+      {{ recommendation.title | escape }}
+    </a>
+  </h2>
+  <p class="recommendation-note">{{ recommendation.note | escape }}</p>
+</article>
