@@ -6,4 +6,8 @@
 #   url: https://antirez.com/news/169
 #   note: 不要绝望，学习并适应。
 
-[]
+- added_at: "2026-07-16"
+  kind: article
+  title: Some Things Just Take Time
+  url: https://lucumr.pocoo.org/2026/3/20/some-things-just-take-time/
+  note: 生孩子需要怀胎十月，种一棵树需要数十年，很多事是急不来的。真正有价值的东西，往往需要时间沉淀。
