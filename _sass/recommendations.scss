@@ -2,48 +2,50 @@
   max-width: 46rem;
   margin-top: 2rem;
 
-  .recommendation-item {
-    padding: 1.6rem 0;
-    border-bottom: 1px solid var(--main-border-color);
-
-    &:first-child {
-      padding-top: 0;
-    }
-
-    &:last-child {
-      padding-bottom: 0;
-      border-bottom: 0;
-    }
+  .recommendation-day + .recommendation-day {
+    padding-top: 2rem;
+    margin-top: 2rem;
+    border-top: 1px solid var(--main-border-color);
   }
 
-  .recommendation-meta {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    margin-bottom: 0.45rem;
+  .recommendation-date {
+    margin: 0 0 0.3rem;
     color: var(--text-muted-color);
-    font-size: 0.85rem;
+    font-size: 0.9rem;
+    font-weight: 500;
     line-height: 1.25rem;
   }
 
-  .recommendation-separator {
-    margin: 0 0.5rem;
-    color: var(--text-muted-color);
-    opacity: 0.55;
+  .recommendation-list {
+    margin: 0 -1rem;
   }
 
-  .recommendation-kind {
-    color: inherit;
+  .recommendation-item {
+    padding: 1.1rem 1rem;
 
-    i {
-      width: 1rem;
-      margin-right: 0.2rem;
-      text-align: center;
+    &:nth-child(odd) {
+      background-color: var(--main-bg, #ffffff);
+      background-image: linear-gradient(
+        to left,
+        var(--main-bg, #ffffff),
+        var(--tb-odd-bg),
+        var(--tb-odd-bg),
+        var(--tb-odd-bg),
+        var(--main-bg, #ffffff)
+      );
     }
   }
 
+  .recommendation-heading {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 0.25rem 0.65rem;
+    margin-bottom: 0.45rem;
+  }
+
   .recommendation-title {
-    margin: 0 0 0.45rem;
+    margin: 0;
     font-size: 1.25rem;
     line-height: 1.4;
 
@@ -55,6 +57,19 @@
         color: #d2603a !important;
         border-bottom: 1px solid #d2603a !important;
       }
+    }
+  }
+
+  .recommendation-kind {
+    color: var(--text-muted-color);
+    font-size: 0.85rem;
+    line-height: 1.25rem;
+    white-space: nowrap;
+
+    i {
+      width: 1rem;
+      margin-right: 0.2rem;
+      text-align: center;
     }
   }
 
@@ -75,8 +90,18 @@
   #recommendations {
     margin-top: 1.5rem;
 
+    .recommendation-day + .recommendation-day {
+      padding-top: 1.6rem;
+      margin-top: 1.6rem;
+    }
+
+    .recommendation-date {
+      margin-bottom: 0.2rem;
+    }
+
     .recommendation-item {
-      padding: 1.35rem 0;
+      padding-top: 1rem;
+      padding-bottom: 1rem;
     }
 
     .recommendation-title {
