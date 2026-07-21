@@ -3,7 +3,7 @@ layout: post
 title: 为自己写作
 date: 2026-06-29
 categories: 随笔
-tags: [思考, 写作]
+tags: [写作]
 description: 从小学被批改的日记到自由写作，写作的异化与回归——学会不再考虑别人的目光，纯粹地为自己而写。
 ---
 

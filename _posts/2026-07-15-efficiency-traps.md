@@ -3,7 +3,7 @@ layout: post
 title: 效率陷阱
 date: 2026-07-15
 categories: 心得
-tags: [职场, 思考]
+tags: [职场]
 description: 探讨生产力的真正含义，分享职场中两个常见的效率陷阱
 ---
 
