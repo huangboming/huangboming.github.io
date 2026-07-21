@@ -126,6 +126,8 @@ media_subpath: /assets/images/shenzhen-to-hangzhou-via-hong-kong-airport/
 
 ---
 
+## 脚注
+
 [^1]: 参见[龍運巴士 A36 線](https://hkbus.fandom.com/wiki/龍運巴士A36線)
 [^2]: 因为紅橋站临近终点站，而且途经[港珠澳大橋香港口岸旅檢大樓](https://hkbus.fandom.com/wiki/港珠澳大橋香港口岸旅檢大樓)。很多人在港珠澳大橋香港口岸旅檢大樓站下车。当天是周五，我猜测是香港人从这里出境，乘坐巴士去珠海或者澳门旅游。
 [^3]: 具体要求可以看[香港机场的旅客指南](https://www.hongkongairport.com/tc/passenger-guide/airport-security/)

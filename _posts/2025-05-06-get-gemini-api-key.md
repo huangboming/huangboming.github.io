@@ -164,6 +164,8 @@ uv pip install pip
 
 ---
 
+## 脚注
+
 [^1]: 详情请见开发者在 PR 下的评论：[https://github.com/open-webui/open-webui/pull/9241#issuecomment-2629707340](https://github.com/open-webui/open-webui/pull/9241#issuecomment-2629707340)
 
 [^2]: 参见 [https://docs.openwebui.com/features/plugin/functions/](https://docs.openwebui.com/features/plugin/functions/)

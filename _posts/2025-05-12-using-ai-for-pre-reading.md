@@ -93,6 +93,8 @@ Adapt the summary style to the nature of the text (e.g., academic tone for resea
 
 ---
 
+## 脚注
+
 [^1]: 莫提默 J. 艾得勒, 查尔斯 范多伦著 ; 郝明义, 朱衣译. 如何阅读一本书. 第一版. 北京: 商务印书馆, 2004. 这四个主要问题可以在第五章找到
 
 [^2]: 这份总结很可能比原文长，读它不如直接去读原文
