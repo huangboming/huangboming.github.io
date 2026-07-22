@@ -65,7 +65,7 @@ Turso 是一个开源的数据库。它有一个赏金计划，给每一个发�
 
 > The main problem of course is that it costs the slopmaker perhaps a minute to generate their submission. But it costs us hours to read, understand, and engage with them. And they can be generated at a semi-infinite pace. It is possible to set up automated systems to gatekeep this, but with a non-negligible dollar value attached to it, the incentive is just too great for the AIs to just keep arguing, reopening the same PR, etc.（核心问题在于，垃圾内容制造者可能仅需要一分钟就能生成他们的提交，而我们却需要耗费数小时去阅读、理解并且处理它们。而且，他们生成这种垃圾内容的速度几乎是无穷无尽的。尽管我们可以建立自动化系统来拦截把关，但由于这牵涉到不可忽视的金钱利益（赏金），在巨大的诱惑下，AI 会无休止地进行争辩、反复重开同一个 PR 等操作。）
 >
-> -- Turso 团队
+> -- Glauber Costa
 
 如果把代码审查完全交给 AI，你就不知道这部分代码为什么要这么写，系统为什么要这么设计。即使测试跑通了，如果不去逐行阅读测试代码，你就无从得知这些测试测了什么、有没有覆盖到核心逻辑。甚至在很多时候，这些测试本身也是 AI 的产物。
 
