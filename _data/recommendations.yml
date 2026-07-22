@@ -6,14 +6,20 @@
 #   url: https://antirez.com/news/169
 #   note: 不要绝望，学习并适应。
 
-- added_at: "2026-07-16"
+- added_at: "2026-07-22"
   kind: article
-  title: Some Things Just Take Time
-  url: https://lucumr.pocoo.org/2026/3/20/some-things-just-take-time/
-  note: 生孩子需要怀胎十月，种一棵树需要数十年，很多事是急不来的。真正有价值的东西，往往需要时间沉淀。
+  title: Programming as Theory Building
+  url: https://pages.cs.wisc.edu/~remzi/Naur.pdf
+  note: 编程的本质是在程序员的大脑中构建关于现实世界问题域及其解决方案的理论，或者说心智模型，代码和文档只是这个模型的产物。
 
 - added_at: "2026-07-20"
   kind: book
   title: 西方哲学史讲演录
   url: https://book.douban.com/subject/4246032/
   note: 西方哲学入门书，也是我的第一本能读进去的哲学书。这本书是作者讲课录音整理稿整理而成，语言通俗易懂。这本书最难得的是不仅讲某个哲人的思想，还会讲这个哲人受到了哪些前人思想的影响，又对后面的哲学思潮产生了什么影响。
+
+- added_at: "2026-07-16"
+  kind: article
+  title: Some Things Just Take Time
+  url: https://lucumr.pocoo.org/2026/3/20/some-things-just-take-time/
+  note: 生孩子需要怀胎十月，种一棵树需要数十年，很多事是急不来的。真正有价值的东西，往往需要时间沉淀。
