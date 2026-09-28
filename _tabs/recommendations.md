@@ -1,5 +1,5 @@
 ---
-title: 推荐阅读
+title: 值得一读
 icon: fas fa-book-open
 order: 4
 permalink: /recommended-reading/
@@ -8,7 +8,7 @@ comments: false
 description: 推荐的书籍、文章和视频
 ---
 
-<p class="recommendations-intro">收录一些我认为值得一读或一看的书籍、文章和视频。（<del>其实就是懒得写成一篇推荐文</del>）</p>
+<p class="recommendations-intro">收录一些我认为值得一读或一看的书籍、文章和视频。</p>
 
 {% assign recommendations = site.data.recommendations %}
 
